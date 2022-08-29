@@ -7,10 +7,7 @@ from musician.models import Musician
 class MusicianModelTest(TestCase):
     def setUp(self) -> None:
         Musician.objects.create(
-            first_name="Joseph",
-            last_name="Green",
-            instrument="the guitar",
-            age=16
+            first_name="Joseph", last_name="Green", instrument="the guitar", age=16
         )
 
     def test_types_of_fields(self):
@@ -19,10 +16,16 @@ class MusicianModelTest(TestCase):
         for field in char_fields:
             with self.subTest(field):
                 print(Musician._meta.get_field(field))
-                self.assertEqual(isinstance(Musician._meta.get_field(field), CharField), True)
+                self.assertEqual(
+                    isinstance(Musician._meta.get_field(field), CharField), True
+                )
 
-        self.assertEqual(isinstance(Musician._meta.get_field("age"), IntegerField), True)
-        self.assertEqual(isinstance(Musician._meta.get_field("date_of_applying"), DateField), True)
+        self.assertEqual(
+            isinstance(Musician._meta.get_field("age"), IntegerField), True
+        )
+        self.assertEqual(
+            isinstance(Musician._meta.get_field("date_of_applying"), DateField), True
+        )
 
     def test_fields_max_length(self):
         char_fields = ["first_name", "last_name", "instrument"]
