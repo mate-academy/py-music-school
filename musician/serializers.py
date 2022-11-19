@@ -16,4 +16,3 @@ class MusicianSerializer(serializers.ModelSerializer):
             "is_adult",
             "date_of_applying"
         )
-
