@@ -7,7 +7,8 @@ from rest_framework.test import APIClient
 from musician.models import Musician
 from musician.serializers import MusicianSerializer
 
-MUSICIAN_URL = reverse("musician:manage-list")
+# I could add basename to router, but I guess you have to change this weird endpoint name
+MUSICIAN_URL = reverse("musician:musician-list")
 
 
 class MusicianApiTests(TestCase):
