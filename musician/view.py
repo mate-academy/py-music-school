@@ -7,4 +7,3 @@ from musician.models import Musician
 class MusicianViewSet(viewsets.ModelViewSet):
     queryset = Musician.objects.all()
     serializer_class = MusicianSerializer
-    
