@@ -17,6 +17,4 @@ class Musician(models.Model):
 
     def clean(self):
         if self.age < 14:
-            raise ValueError({
-                "age": f"age must be more or equal than 14 "
-            })
+            raise ValueError({"age": "Age must be more or equal than 14"})
