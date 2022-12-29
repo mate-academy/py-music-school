@@ -20,18 +20,3 @@ class Musician(models.Model):
             raise ValueError({
                 "age": f"age must be more or equal than 14 "
             })
-
-    # def save(
-    #     self,
-    #     force_insert=False,
-    #     force_update=False,
-    #     using=None,
-    #     update_fields=None
-    # ):
-    #     self.full_clean()
-    #     return super(Musician, self).save(
-    #         force_insert,
-    #         force_update,
-    #         using,
-    #         update_fields
-    #     )
