@@ -85,7 +85,7 @@ DATABASES = {
 }
 
 REST_FRAMEWORK = {
-    'DATETIME_FORMAT': '%B %d, %Y',
+    "DATETIME_FORMAT": "%B %d, %Y",
 }
 
 # Password validation
