@@ -3,7 +3,7 @@ from rest_framework import routers
 from musician.views import MusicianViewSet
 
 router = routers.DefaultRouter()
-router.register("musician", MusicianViewSet, 'manage-list')
+router.register("musician", MusicianViewSet, "manage-list")
 
 urlpatterns = [
     path("", include(router.urls))
