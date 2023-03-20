@@ -16,6 +16,4 @@ class Musician(models.Model):
 
     @property
     def is_adult(self) -> bool:
-        if self.age >= 21:
-            return True
-        return False
+        return self.age >= 21

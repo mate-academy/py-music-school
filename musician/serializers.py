@@ -6,12 +6,6 @@ from musician.models import Musician
 class MusicianSerializer(serializers.ModelSerializer):
     class Meta:
         model = Musician
-        fields = "__all__"
-
-
-class MusicianListSerializer(MusicianSerializer):
-    class Meta:
-        model = Musician
         fields = (
             "id",
             "first_name",
