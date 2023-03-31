@@ -10,7 +10,11 @@ from .serializers import MusicianSerializer
 def musician_list(request):
     if request.method == "GET":
         musicians = Musician.objects.all()
-        serializer = MusicianSerializer(musicians, many=True, context={"request": request})
+        serializer = MusicianSerializer(
+            musicians,
+            many=True,
+            context={"request": request}
+        )
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     elif request.method == "POST":
@@ -29,7 +33,11 @@ def musician_detail(request, pk):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     elif request.method in ["PUT", "PATCH"]:
-        serializer = MusicianSerializer(musician, data=request.data, partial=request.method == "PATCH")
+        serializer = MusicianSerializer(
+            musician,
+            data=request.data,
+            partial=request.method == "PATCH"
+        )
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data, status=status.HTTP_200_OK)
