@@ -5,6 +5,7 @@ from musician.models import Musician
 
 class MusicianSerializer(serializers.ModelSerializer):
     class Meta:
+
         model = Musician
         fields = (
             "id",
