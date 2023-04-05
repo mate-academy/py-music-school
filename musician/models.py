@@ -14,6 +14,7 @@ class Musician(models.Model):
     def __str__(self) -> str:
         return f"{self.first_name} {self.last_name}"
 
+    @property
     def is_adult(self) -> bool:
         return 21 >= self.age
 
