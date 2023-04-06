@@ -5,7 +5,7 @@ from musician.views import MusicianViewSet
 
 
 router = routers.DefaultRouter()
-router.register("musicians", MusicianViewSet, basename="manage")
+router.register("musicians", MusicianViewSet, basename="musician")
 
 urlpatterns = [
     path("", include(router.urls))
