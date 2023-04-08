@@ -20,4 +20,3 @@ class Musician(models.Model):
         if self.age >= self.ADULT_AGE:
             return True
         return False
-
