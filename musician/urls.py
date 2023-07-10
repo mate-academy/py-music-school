@@ -7,6 +7,6 @@ router.register("musicians", MusicianViewSet, basename="manage")
 
 urlpatterns = [
 
-              ] + router.urls
+] + router.urls
 
 app_name = "musician"
