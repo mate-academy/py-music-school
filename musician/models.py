@@ -14,4 +14,4 @@ class Musician(models.Model):
         return self.age >= 21
 
     def __str__(self) -> str:
-        return F"{self.first_name} {self.last_name}"
+        return f"{self.first_name} {self.last_name}"
