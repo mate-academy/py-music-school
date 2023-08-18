@@ -22,6 +22,4 @@ urlpatterns = [
     path("musicians/<int:pk>/", musician_detail, name="manage-detail"),
 ]
 
-
-
 app_name = "musician"
