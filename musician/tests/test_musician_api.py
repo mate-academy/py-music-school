@@ -7,7 +7,7 @@ from rest_framework.test import APIClient
 from musician.models import Musician
 from musician.serializers import MusicianSerializer
 
-MUSICIAN_URL = reverse("musician:manage-list")
+MUSICIAN_URL = reverse("musician:musician-list")
 
 
 class MusicianApiTests(TestCase):
