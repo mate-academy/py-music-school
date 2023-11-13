@@ -13,6 +13,5 @@ class Musician(models.Model):
     def is_adult(self) -> bool:
         return self.age > 21
 
-
     def __str__(self):
         return self.first_name + " " + self.last_name
