@@ -10,10 +10,9 @@ class Musician(models.Model):
     date_of_applying = models.DateTimeField(auto_now_add=True)
 
     @property
-    def is_adult(self) -> int:
-        if self.age > 21:
-            return True
-        return False
+    def is_adult(self) -> bool:
+        return self.age > 21
+
 
     def __str__(self):
         return self.first_name + " " + self.last_name

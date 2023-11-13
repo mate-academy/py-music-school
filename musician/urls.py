@@ -3,9 +3,9 @@ from musician.views import MusicianViewSet
 
 
 router = routers.DefaultRouter()
-router.register("music_school", MusicianViewSet, basename="manage")
+router.register("manage-list", MusicianViewSet, basename="manage")
 
 
-urlpatterns = router.urls
+urlpatterns = [] + router.urls
 
 app_name = "musician"

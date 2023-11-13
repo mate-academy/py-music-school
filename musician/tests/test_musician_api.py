@@ -5,7 +5,7 @@ from rest_framework import status
 from rest_framework.test import APIClient
 
 from musician.models import Musician
-from musician.serialisers  import MusicianSerializer
+from musician.serializers  import MusicianSerializer
 
 MUSICIAN_URL = reverse("musician:manage-list")
 

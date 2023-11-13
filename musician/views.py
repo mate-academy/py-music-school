@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from musician.models import Musician
-from musician.serialisers import MusicianSerializer
+from musician.serializers import MusicianSerializer
 
 
 class MusicianViewSet(viewsets.ModelViewSet):

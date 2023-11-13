@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from musician.models import Musician
+from .models import Musician
 
 
 class MusicianSerializer(serializers.ModelSerializer):
