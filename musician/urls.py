@@ -20,4 +20,4 @@ urlpatterns = [
     path("manage-list/<pk>/", musician_detail, name="manage-detail"),
 ]
 
-app_name = 'musician'
+app_name = "musician"
