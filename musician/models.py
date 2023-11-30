@@ -9,6 +9,10 @@ class Musician(models.Model):
     age = models.IntegerField()
     date_of_applying = models.DateField(auto_now_add=True)
 
+    @property
+    def is_adult(self):
+        return self.age >= 21
+
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
 
