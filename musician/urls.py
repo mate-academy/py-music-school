@@ -1,14 +1,11 @@
-from django.urls import include, path
-from rest_framework.routers import DefaultRouter
-
+from rest_framework import routers
 from musician.views import MusicianViewSet
 
-routers = DefaultRouter()
-routers.register("musicians", MusicianViewSet, "manage")
+
+router = routers.DefaultRouter()
+router.register("manage-list", MusicianViewSet, basename="manage")
 
 
-urlpatterns = [
-    path("", include(routers.urls))
-]
+urlpatterns = [] + router.urls
 
 app_name = "musician"
