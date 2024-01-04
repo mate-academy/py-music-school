@@ -1,9 +1,8 @@
 from django.urls import path, include
-from rest_framework import routers
+from rest_framework.routers import DefaultRouter
+from .views import MusicianViewSet
 
-from musician.views import MusicianViewSet
-
-router = routers.DefaultRouter()
+router = DefaultRouter()
 router.register("musicians", MusicianViewSet, basename="manage")
 
 urlpatterns = [
