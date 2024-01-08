@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="musician",
             name="age",
-            field=models.IntegerField(validators=[musician.models.validate_age]),
+            field=models.IntegerField(),
         ),
         migrations.AlterField(
             model_name="musician",
