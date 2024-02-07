@@ -5,7 +5,7 @@ from django.urls import path, include
 from musician.views import MusicianViewSet
 
 router = routers.DefaultRouter()
-router.register("musician", MusicianViewSet)
+router.register("manage-list", MusicianViewSet)
 
 urlpatterns = [path("", include(router.urls))]
 
