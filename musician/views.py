@@ -5,5 +5,5 @@ from musician.serializers import MusicianSerializer
 
 
 class MusicianViewSet(viewsets.ModelViewSet):
-    model = Musician
+    queryset = Musician.objects.all()
     serializer_class = MusicianSerializer
