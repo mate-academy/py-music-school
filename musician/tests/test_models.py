@@ -1,5 +1,5 @@
-from django.test import TestCase
 from django.db.models import CharField, IntegerField, DateField
+from django.test import TestCase
 
 from musician.models import Musician
 
@@ -28,9 +28,7 @@ class MusicianModelTest(TestCase):
             isinstance(Musician._meta.get_field("age"), IntegerField), True
         )
         self.assertEqual(
-            isinstance(
-                Musician._meta.get_field("date_of_applying"), DateField
-            ),
+            isinstance(Musician._meta.get_field("date_of_applying"), DateField),
             True,
         )
 
@@ -39,9 +37,7 @@ class MusicianModelTest(TestCase):
 
         for field in char_fields:
             with self.subTest(f"{field} max_length"):
-                self.assertEqual(
-                    Musician._meta.get_field(field).max_length, 63
-                )
+                self.assertEqual(Musician._meta.get_field(field).max_length, 63)
 
     def test_str_method(self):
         musician = Musician.objects.get(first_name="Joseph")
