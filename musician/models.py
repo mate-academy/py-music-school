@@ -12,9 +12,6 @@ class Musician(models.Model):
             MinValueValidator(14)]
     )
 
-    class Meta:
-        verbose_name_plural = "Musicians"
-
     @property
     def is_adult(self):
         return self.age >= 21
