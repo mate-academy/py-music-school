@@ -1,9 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database
+db.sqlite3
+
+# Django media & static (local)
+/static/
+/media/
+
+# Environments
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# IDEs
 .idea/
 .vscode/
-*.iml
-.env
+*.swp
+*.bak
+
+# OS files
 .DS_Store
-venv/
-.pytest_cache/
-**__pycache__/
-**db.sqlite3
+Thumbs.db
