@@ -1,0 +1,35 @@
+[
+  {
+    "model": "musician.musician",
+    "pk": 1,
+    "fields": {
+      "first_name": "John",
+      "last_name": "Doe",
+      "instrument": "Guitar",
+      "age": 28,
+      "date_of_applying": "2024-05-10"
+    }
+  },
+  {
+    "model": "musician.musician",
+    "pk": 2,
+    "fields": {
+      "first_name": "Alice",
+      "last_name": "Smith",
+      "instrument": "Piano",
+      "age": 22,
+      "date_of_applying": "2025-01-15"
+    }
+  },
+  {
+    "model": "musician.musician",
+    "pk": 3,
+    "fields": {
+      "first_name": "Bob",
+      "last_name": "Johnson",
+      "instrument": "Drums",
+      "age": 35,
+      "date_of_applying": "2023-11-20"
+    }
+  }
+]
