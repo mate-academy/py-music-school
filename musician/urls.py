@@ -1,3 +1,14 @@
-urlpatterns = []
+from django.urls import include, path
+from rest_framework import routers
 
-app_name = "musician"
+from musician.views import MusicianViewSet
+
+router = routers.DefaultRouter()
+router.register(r'musicians', MusicianViewSet , basename="manage")
+
+app_name = 'musician'
+
+urlpatterns = [
+    path("", include(router.urls)),
+]
+
