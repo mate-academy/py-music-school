@@ -7,12 +7,9 @@ class MusicianSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Musician
-        fields = '__all__'
+        fields = "__all__"
 
     def validate_age(self, age):
         if age < 14:
             raise serializers.ValidationError("Age must be between 14 and 18")
         return age
-
-
-

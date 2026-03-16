@@ -12,7 +12,5 @@ class Musician(models.Model):
         return f'{self.first_name} {self.last_name}'
 
     @property
-    def is_adult (self):
+    def is_adult(self):
         return self.age >= 14
-
-
