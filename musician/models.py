@@ -9,7 +9,7 @@ class Musician(models.Model):
     date_of_applying = models.DateField(auto_now_add=True)
 
     def __str__(self):
-        return f'{self.first_name} {self.last_name}'
+        return f"{self.first_name} {self.last_name}"
 
     @property
     def is_adult(self):
