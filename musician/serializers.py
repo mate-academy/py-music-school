@@ -16,4 +16,3 @@ class MusicianSerializer(serializers.ModelSerializer):
             "is_adult"
         )
         read_only_fields = ("id",)
-
