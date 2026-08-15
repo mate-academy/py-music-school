@@ -29,7 +29,9 @@ class Migration(migrations.Migration):
                 (
                     "age",
                     models.IntegerField(
-                        validators=[django.core.validators.MinValueValidator(14)]
+                        validators=[
+                            django.core.validators.MinValueValidator(14)
+                        ]
                     ),
                 ),
                 ("date_of_applying", models.DateField(auto_now_add=True)),
