@@ -63,6 +63,11 @@ class MusicianApiTests(TestCase):
     def test_get_musician(self):
         response = self.client.get(f"{MUSICIAN_URL}{self.first_musician.id}/")
         serializer = MusicianSerializer(self.first_musician)
+        print("------ dsad as dsa sa- a-----")
+        print(serializer.data)
+        print("------ dsad as dsa sa- a-----")
+        print(response.data)
+        print("------ dsad as dsa sa- a-----")
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data, serializer.data)
         self.assertIn("is_adult", response.data)
