@@ -82,6 +82,7 @@ class MusicianApiTests(TestCase):
             },
         )
         db_musician = Musician.objects.get(id=1)
+        db_musician.refresh_from_db()
         self.assertEqual(
             [
                 db_musician.first_name,
