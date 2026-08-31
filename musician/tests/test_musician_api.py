@@ -67,6 +67,7 @@ class MusicianApiTests(TestCase):
         self.assertEqual(response.data, serializer.data)
         self.assertIn("is_adult", response.data)
 
+
     def test_get_invalid_musician(self):
         response = self.client.get(f"{MUSICIAN_URL}50/")
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
