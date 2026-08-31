@@ -7,7 +7,7 @@ from rest_framework.test import APIClient
 from musician.models import Musician
 from musician.serializers import MusicianSerializer
 
-MUSICIAN_URL = reverse("musician:manage-list")
+MUSICIAN_URL = reverse("musician:musician-list")
 
 
 class MusicianApiTests(TestCase):
@@ -40,10 +40,10 @@ class MusicianApiTests(TestCase):
         self.assertEqual(musicians.count(), 2)
 
     def test_get_musicians(self):
-        musicians = self.client.get(MUSICIAN_URL)
+        response = self.client.get(MUSICIAN_URL)
         serializer = MusicianSerializer(Musician.objects.all(), many=True)
-        self.assertEqual(musicians.status_code, status.HTTP_200_OK)
-        self.assertEqual(musicians.data, serializer.data)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.json(), serializer.data)
 
     def test_post_musicians(self):
         musicians = self.client.post(
@@ -64,8 +64,8 @@ class MusicianApiTests(TestCase):
         response = self.client.get(f"{MUSICIAN_URL}{self.first_musician.id}/")
         serializer = MusicianSerializer(self.first_musician)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(response.data, serializer.data)
-        self.assertIn("is_adult", response.data)
+        self.assertEqual(response.json(), serializer.data)
+        self.assertIn("is_adult", response.json())
 
     def test_get_invalid_musician(self):
         response = self.client.get(f"{MUSICIAN_URL}50/")
