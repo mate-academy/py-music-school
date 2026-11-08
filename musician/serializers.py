@@ -3,7 +3,7 @@ from rest_framework import serializers
 from musician.models import Musician
 
 
-class MusicSerializer(serializers.ModelSerializer):
+class MusicianSerializer(serializers.ModelSerializer):
 	is_adult = serializers.BooleanField(read_only=True)
 
 	class Meta:
