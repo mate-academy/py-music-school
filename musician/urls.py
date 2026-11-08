@@ -9,5 +9,5 @@ router = routers.DefaultRouter()
 router.register("musicians", MusicianViewSet, basename="manage")
 
 urlpatterns = [
-	path("", include(router.urls)),
+    path("", include(router.urls)),
 ]
